@@ -68,13 +68,10 @@ export const Pipeline = () => {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   
   return (
-    <div className="relative w-full overflow-hidden py-32 flex justify-center items-center">
-      
-      {/* Connector Line (Behind) */}
-      <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-slate-200 -z-10 max-w-5xl mx-auto" />
+    <div className="relative w-full flex justify-center items-center py-10">
 
       {/* Steps Container */}
-      <div className="flex items-center gap-3 px-4 h-80">
+      <div className="flex items-center gap-3 px-4">
         {GENERATED_STEPS.map((step, index) => {
           // If we hover something, dim the others slightly
           // Removing dimming as per request

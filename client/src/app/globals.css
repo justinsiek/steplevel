@@ -1,23 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fdfdfc; /* Off-white */
-  --foreground: #1a1a1a; /* Near-black */
-  --accent: #64748b; /* Slate blue/grey */
-  --accent-muted: #94a3b8;
-  --success: #10b981;
-  --border: #e2e8f0;
+  /* Off-white background, warm but sterile */
+  --background: #fafaf9; 
+  /* Near-black text */
+  --foreground: #09090b; 
+  /* Muted accent (desaturated slate-violet) */
+  --accent: #5e6887;
+  --accent-light: #94a3b8;
+  /* Borders */
+  --border: #e4e4e7;
+  /* Subtler secondary text */
+  --foreground-muted: #52525b;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
-  .font-mono-nums {
-    font-feature-settings: "tnum";
-    font-variant-numeric: tabular-nums;
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  @keyframes shine {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shine {
+    animation: shine 1.5s infinite linear;
   }
 }

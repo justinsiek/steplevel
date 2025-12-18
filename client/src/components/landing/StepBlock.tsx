@@ -137,7 +137,7 @@ export const StepBlock = ({ data, isHovered, isSiblingHovered, onHover, index }:
       className={cn(
         "relative flex flex-col overflow-hidden bg-white transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]",
         "border",
-        isHovered ? "z-20 shadow-xl rounded-lg border-slate-200" : "z-0 shadow-sm rounded-md border-slate-200 hover:border-slate-300",
+        isHovered ? "z-20 shadow-xl border-slate-200" : "z-0 shadow-sm border-slate-200 hover:border-slate-300",
         // Warning state styling
         !isHovered && isWarning ? "border-red-200 bg-red-50/30" : "",
         isComplete ? "border-emerald-200 bg-emerald-50/10" : ""
@@ -155,7 +155,7 @@ export const StepBlock = ({ data, isHovered, isSiblingHovered, onHover, index }:
             isHovered ? "opacity-0 pointer-events-none delay-0" : "opacity-100 delay-100"
         )}>
             <div className={cn(
-                "p-2.5 rounded-xl transition-colors duration-500",
+                "p-2.5 transition-colors duration-500",
                 isWarning ? "bg-red-100 text-red-600" : "bg-slate-100 text-slate-600",
                 isComplete && "bg-emerald-100 text-emerald-600"
             )}>
@@ -211,7 +211,7 @@ export const StepBlock = ({ data, isHovered, isSiblingHovered, onHover, index }:
         <div className="flex items-center justify-between">
            <div className="flex items-center gap-3">
              <div className={cn(
-                 "p-2 rounded-lg transition-colors duration-500",
+                 "p-2 transition-colors duration-500",
                  isWarning ? "bg-red-100 text-red-600" : "bg-slate-100 text-slate-600",
                  isComplete && "bg-emerald-100 text-emerald-600"
              )}>
@@ -242,7 +242,7 @@ export const StepBlock = ({ data, isHovered, isSiblingHovered, onHover, index }:
                         )}
                         
                         {stage === "issue-found" && (
-                             <div className="rounded-md bg-red-50 p-2.5 border border-red-100 w-full">
+                             <div className="bg-red-50 p-2.5 border border-red-100 w-full">
                                 <div className="flex items-center gap-2 text-xs text-red-700 font-semibold mb-1">
                                     <AlertCircle className="h-4 w-4" />
                                     <span>Reasoning Loop Detected</span>
@@ -263,7 +263,7 @@ export const StepBlock = ({ data, isHovered, isSiblingHovered, onHover, index }:
                         )}
 
                         {stage === "complete" && (
-                            <div className="rounded-md bg-emerald-50 p-2.5 border border-emerald-100 w-full">
+                            <div className="bg-emerald-50 p-2.5 border border-emerald-100 w-full">
                                 <div className="flex items-center gap-2 text-xs text-emerald-700 font-semibold mb-1">
                                     <Check className="h-4 w-4" />
                                     <span>Issue Resolved</span>
